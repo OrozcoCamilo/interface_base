@@ -1,7 +1,12 @@
 // src/services/api.js
-import axios from 'axios';
-
 export const fetchData = async () => {
-  const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
-  return response.data;
-};
+    try {
+      const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error('Error al obtener los datos:', error);
+      return [];
+    }
+  };
+  

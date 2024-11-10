@@ -1,4 +1,3 @@
-// src/components/PostList.js
 import React, { useEffect, useState } from 'react';
 import { fetchData } from '../services/api';
 
@@ -7,12 +6,12 @@ function PostList() {
 
   useEffect(() => {
     const getPosts = async () => {
-      const data = await fetchData();
-      setPosts(data);
+      const data = await fetchData(); // Llama a la función fetchData
+      setPosts(data); // Actualiza el estado con los datos obtenidos
     };
 
     getPosts();
-  }, []);
+  }, []); // El array vacío asegura que solo se ejecute una vez cuando el componente se monte
 
   return (
     <div>
@@ -27,3 +26,4 @@ function PostList() {
 }
 
 export default PostList;
+

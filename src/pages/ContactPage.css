@@ -1,0 +1,139 @@
+/* src/pages/ContactPage.css */
+
+/* Fondo de la página */
+.contact-page {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f); /* Fondo con gradiente vibrante */
+    min-height: 100vh; /* Asegura que la página ocupe toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out; /* Animación de fade-in */
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Contenedor del formulario */
+  .contact-form-container {
+    background: #fff; /* Fondo blanco */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-form-container:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Título del formulario */
+  .form-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  /* Estilos de los campos del formulario */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Form group */
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  /* Label */
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Input y textarea */
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    padding-left: 50px; /* Espacio para el label */
+  }
+  
+  /* Efecto de foco en los campos */
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #ff7043;
+    box-shadow: 0 0 8px rgba(255, 112, 67, 0.6);
+    outline: none;
+  }
+  
+  /* Mover el label cuando el campo está enfocado */
+  .form-group input:focus + label,
+  .form-group textarea:focus + label {
+    transform: translateY(-20px);
+    font-size: 0.9rem;
+    color: #ff7043;
+  }
+  
+  /* Estilos del botón */
+  button {
+    padding: 15px;
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+  }
+  
+  button:hover {
+    background-color: #e64a19;
+    transform: translateY(-3px);
+  }
+  
+  button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Sombra en el formulario */
+  .contact-form-container {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+  
+  .contact-form-container:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  }
+  

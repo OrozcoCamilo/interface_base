@@ -1,0 +1,162 @@
+/* src/pages/HomePage.css */
+
+/* Fondo con gradiente dinámico */
+.home-page {
+    background: linear-gradient(135deg, #f06, #f79, #4b6cb7, #182848);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    height: 100vh;  /* Asegura que ocupe toda la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    color: white;
+    overflow: hidden;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Título principal */
+  .title {
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    animation: slideIn 2s ease-out;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Contenedor de las tarjetas */
+  .card-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    animation: fadeInCards 2s ease-out;
+  }
+  
+  @keyframes fadeInCards {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Estilo de cada tarjeta */
+  .card {
+    width: 300px;
+    height: 380px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    transform: scale(1);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover img {
+    transform: scale(1.1); /* Zoom en la imagen */
+  }
+  
+  /* Contenido de la tarjeta */
+  .card-body {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .card-body h3 {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  
+  .card-body p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .card-body a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .card-body a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* Efecto de neón en las tarjetas */
+  .card:hover .card-body h3 {
+    color: #f06;
+    text-shadow: 0 0 10px #f06, 0 0 20px #f79, 0 0 30px #f79;
+  }
+  
+  /* Animación de parpadeo en el botón */
+  .card-body a {
+    animation: neonButton 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes neonButton {
+    0%, 100% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff0000, 0 0 20px #ff0000;
+      transform: scale(1);
+    }
+    50% {
+      text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #f06, 0 0 30px #f06;
+      transform: scale(1.1);
+    }
+  }
+  

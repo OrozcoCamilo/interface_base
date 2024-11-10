@@ -1,0 +1,25 @@
+/* src/pages/PostPage.css */
+.post-page {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #f8f9fa; /* Fondo suave */
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .page-title {
+    font-size: 36px;
+    color: #2d2d2d;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .page-description {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  

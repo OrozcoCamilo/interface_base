@@ -1,31 +1,107 @@
-/* src/styles/App.css */
-header {
-  background-color: #282c34;
-  padding: 20px;
-  color: white;
+/* src/App.css */
+body {
+  background-color: #f0f0f0; 
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  height: 100%;
 }
 
-ul {
-  list-style: none;
+h1 {
+  color: #4CAF50;
+  text-align: center;
+}
+
+.container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-li {
-  margin-right: 20px;
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que la app ocupe toda la altura */
 }
 
-a {
+header, footer {
+  background-color: #333;
   color: white;
-  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
 }
 
 footer {
-  background-color: #282c34;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  /* Elimina la propiedad 'position: absolute;' y 'bottom: 0;' para que flexbox maneje la ubicación */
 }
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Agregar animación para los elementos */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h1, p {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Estilos para el modo oscuro */
+.App.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+/* src/App.css o src/index.css */
+
+/* Fondo global */
+body {
+  background-color: #f0f0f0; /* Color de fondo claro */
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegura que el formulario se vea correctamente en la pantalla */
+.contact-form-container {
+  background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Fondo de gradiente */
+}
+
+

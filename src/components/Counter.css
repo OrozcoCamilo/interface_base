@@ -1,0 +1,73 @@
+/* src/components/Counter.css */
+.counter-container {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Fondo degradado */
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.counter-container:hover {
+    transform: translateY(-10px); /* Efecto de elevación */
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.count-display span {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.increment {
+    background-color: #28a745; /* Verde para incrementar */
+    color: white;
+}
+
+.increment:hover {
+    background-color: #218838;
+}
+
+.decrement {
+    background-color: #dc3545; /* Rojo para decrementar */
+    color: white;
+}
+
+.decrement:hover {
+    background-color: #c82333;
+}
+
+.reset {
+    background-color: #ffc107; /* Amarillo para resetear */
+    color: black;
+}
+
+.reset:hover {
+    background-color: #e0a800;
+}
